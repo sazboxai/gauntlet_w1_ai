@@ -1,4 +1,3 @@
-
 from flask import Flask, request, jsonify
 from api_ai import update_index, generate_answer
 
