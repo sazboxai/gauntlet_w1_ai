@@ -215,6 +215,7 @@ def update_index(index_name, type):
         
         load_msg_to_pinecone(index_name, type)
         load_pdf_to_pinecone(index_name, type)
+        upsdate_rag_supabase(index_name)
     return {'resp':'ok'}
 
 
