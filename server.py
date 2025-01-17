@@ -1,8 +1,9 @@
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 from api_ai import update_index, generate_answer
 
 app = Flask(__name__)
-
+CORS(app)  # This will enable CORS for all routes
 
 @app.route('/update_index', methods=['POST'])
 def item_rec():
@@ -16,8 +17,6 @@ def generate_answer_channel():
     payload = request.json
     ans = generate_answer(payload["msg"], payload["index_id"])
     return jsonify(ans)
-
-
 
 
 @app.route('/status', methods=["GET"])

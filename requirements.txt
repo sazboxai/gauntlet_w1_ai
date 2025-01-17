@@ -59,3 +59,4 @@ urllib3==2.2.2
 yarl==1.9.7
 supabase==2.11.0
 pandas==2.2.3
+flask_cors==5.0.0
